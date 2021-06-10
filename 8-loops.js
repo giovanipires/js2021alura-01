@@ -10,7 +10,7 @@ const listaDeDestinos = new Array(
 const idadeComprador = 18;
 const estaAcompanhada = false;
 let temPassagemComprada = false;
-const destino = `Rio de Janeiro`;
+const destino = `São Paulo`;
 
 console.log(`\n Destinos Possíveis:`);
 console.log(listaDeDestinos);
@@ -18,13 +18,14 @@ console.log(listaDeDestinos);
 const podeComprar = idadeComprador >= 18 || estaAcompanhada == true;
 
 let contador = 0;
-
+let destinoExiste = false;
 while(contador < 3) {
 	if(listaDeDestinos[contador] == destino) {
-		console.log(`Destino existente`);
-	} else {
-		console.log(`Destino não existe`);
-	}
+		destinoExiste = true;
+		break;
+	} 
 	
 	contador += 1;
 }
+
+console.log(`O dentino existe: ${destinoExiste}`);
